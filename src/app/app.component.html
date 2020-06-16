@@ -1,4 +1,24 @@
-<h1 style="text-align: centergir;">
-  {{title}}
-</h1>
+<app-navbar></app-navbar>
+
+<div class="container">
+  
+  <h1 style="text-align: center">
+    {{ title }}
+  </h1>
+
+  <div id="textoPantalla">
+    <div class="row justify-content-end align-items-start">
+        <p *ngFor="let i of numerosSeleccionados" > 
+          <input type="button" value="{{i}}">
+        </p> 
+    </div>
+  </div>
+
+  <app-numeros-ba (numeroSeleccionado)="mostrarNumero($event)" [valores]="valores" [numeros]="numeros" ></app-numeros-ba>
+  
+</div>
+
+<app-footer></app-footer>
+
+
 

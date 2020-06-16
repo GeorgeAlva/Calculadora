@@ -1,0 +1,6 @@
+<div class="p-4 borde mt-5">
+    <div class="row justify-content-center align-items-center">
+        <button (click)="numeroPresionado(n)" *ngFor="let n of numeros" class="boton"> {{ n }} </button>
+        <button (click)="valorPresionado(v)" *ngFor="let v of valores" class="boton"> {{ v }} </button>
+    </div>
+</div>
