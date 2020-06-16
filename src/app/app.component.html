@@ -14,7 +14,12 @@
     </div>
   </div>
 
-  <app-numeros-ba (numeroSeleccionado)="mostrarNumero($event)" [valores]="valores" [numeros]="numeros" ></app-numeros-ba>
+  <div class="p-4 borde mt-5">
+    <div class="row justify-content-center align-items-center">
+      <app-numeros-ba (numeroSeleccionado)="mostrarNumero($event)"  [numeros]="numeros" ></app-numeros-ba>
+      <app-operaciones-ba (resultado)="resultado($event)" (numerosEliminados)="numerosEliminados($event)" [numerosSeleccionados]="numerosSeleccionados" [valores]="valores" ></app-operaciones-ba>
+    </div>
+  </div>
   
 </div>
 

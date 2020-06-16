@@ -7,12 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Calculadora';
-  resultado = 0;
-  numerosSeleccionados: any[] = [];
+  visible = false;
+  numerosSeleccionados: string[] = [];
   numeros = [1, 2, 3, 4, 5, 6];
-  valores = ['Borrar', 'X'];
+  valores = ['Borrar', 'x', '='];
 
-  mostrarNumero( num: number ) {
+  mostrarNumero( num: string ) {
+    this.numerosSeleccionados.push(num);
+  }
+
+  numerosEliminados( num: string[] ) {
+    this.numerosSeleccionados = num;
+  }
+
+  resultado( num: any ) {
+    this.numerosSeleccionados = [];
     this.numerosSeleccionados.push(num);
   }
 
